@@ -1,0 +1,272 @@
+.center-align{
+    margin:0 auto;
+    width:1080px;
+}
+
+.relative{
+    position:relative;
+}
+
+
+#logo{
+    width:50px;
+    height:45px;
+    display:inline-block;
+    background:url(./GitHub-Mark.png) no-repeat;
+    background-size:cover;
+    vertical-align: middle;
+    position:relative;
+   
+    left:1px;
+    position: absolute;
+
+   
+}
+
+.nav{
+    display:inline-block;
+    margin:0 auto;
+    width:1080px;
+    position:relative;
+    box-sizing:border-box;
+    padding-left:30px;
+}
+
+.nav-right{
+    display:inline-block;
+    margin-top:15px;
+    margin-left:80px;
+    width:400px;
+    height:40px;
+    position:absolute;
+    box-sizing:border-box;
+}
+
+#menu{
+    width:600px;
+    margin:0;
+    display:inline-block;
+   
+   
+}
+
+#menu ul{
+    display:flex;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#menu li{
+    margin:1px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    line-height:1.5;
+    margin-right:10px;
+    font-size:15px;
+    color:white;
+}
+
+#menu li button{
+    border:0;
+}
+
+#search{
+    
+    width:240px;
+    height:40px;
+    box-sizing:border-box;
+    background-color:#c3c5ceb6;
+    text-align:left;
+    border-radius:10px;
+    border-color: transparent;
+    float:left;
+    top:-30px;
+    line-height:10px;
+}
+
+
+
+#search ul {
+    display:none;
+    list-style: none;
+  
+   
+}
+#search:hover ul{
+    display:inline-block;
+    background-color: white;
+    border-radius:5px;
+    border-color:black;
+    
+
+}
+
+#SignInUp{
+    float:right;
+    width:140px;
+    height:40px;
+    margin-left:10px;
+    
+}
+
+#SignInUp a{
+    text-decoration: none;
+    color:white;
+    width: 0 auto;
+   
+}
+
+#SignInUp ul{
+    text-align: left;
+    display: inline-block;
+    height:40px;
+    margin:0;
+    list-style:none;
+    display:flex;
+    padding-left:0;
+    
+}
+.SignIn{
+    margin-right:10px
+}
+
+#SignIn{
+    display:inline-block;
+    width:48px;
+    height:24px;
+    font-size:14px;
+    margin-right:20px;
+}
+
+#SignUp{
+    text-align: center;
+    position:relative;
+    display:inline-block;
+    width:71px;
+    height:34px;
+    font-size:14px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius:5px;
+    padding-bottom: 3px;
+    
+}
+
+#SignUp p{
+    
+    padding-bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+}
+
+#SignInUp p{
+    font-size: 15px;
+}
+
+body{
+    background-color: rgba(12, 12, 12, 0.801);
+}
+
+main{
+   
+    position: relative;
+}
+
+.intro{
+    display: inline-block;
+    padding-right:20px;
+    height:500px;
+    margin-left:100px;
+}
+
+.summary{
+    display: inline-block;
+    width:400px;
+    margin-left:10px;
+}
+.title{
+    margin-top:50px;
+}
+
+.title h1{
+    color:white;
+    font-size: 50px;
+    margin:10px 0;
+}
+.summary p{
+    color:rgba(255, 255, 255, 0.74);
+    font-size: 20px;
+}
+
+.id{
+    display: inline-block;
+    position: absolute;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.959) ;
+    width:400px;
+}
+
+.id ul{
+    padding-left:20px;
+    list-style: none;
+    width:360px;
+    padding-right:20px;
+}
+
+.id input{
+    border-color: rgb(194, 186, 186);
+    border-radius: 5px;
+    height:30px;
+    width:350px;
+}
+
+.id input:hover{
+    background-color: rgb(206, 247, 234);
+}
+
+.id button{
+    border-radius: 5px;
+    border-color:transparent;
+    background-color: green;
+    height:50px;
+    width:360px;
+    font-size: 100%;
+    color:white;
+
+}
+
+#warn1, #warn2{
+    color:gray;
+
+}
+
+.bar{
+    width:1080px;
+    height:70px;
+    margin-top:50px;
+}
+
+.white{
+    width:1080px;
+    height:100px;
+    position: absolute;
+    border-style: solid;
+    background-color: white;
+    border-color: white;
+    z-index: 1;
+   
+
+}
+
+
+.photo{
+    padding-left:800px;
+    display:inline-block;
+    position:absolute;
+    float:right;
+    width:20%;
+    height:50px;
+    z-index:100;
+
+}
