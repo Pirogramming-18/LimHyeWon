@@ -1,0 +1,22 @@
+margin collapsing:좌우에는 안생기는데 상하에서는 서로 겹친다 마진이
+
+1)
+float:left;
+width:100%px
+
+#항상 margin collapsing없앨수있음~
+display:inline-block;
+width:100%;
+
+높이같으면 inline-block하면 알아서 배치됨
+
+inline-block 사이즈 맞았는데 초과되버리면,,
+->엔터 없애거나, margin을 줄이거나,,font-size하거나,,뭘까,,
+그냥 float:left;하자->float자식 인식하기 위해 
+부모를 
+1)overflow:auto;
+2)display:inline-block;
+width:100%
+
+margin: 0 auto;->자식이 부모한테 맞추기
+text-align:center;->부모가 자식한테 가운데 정렬해라
