@@ -1,0 +1,18 @@
+width:calc(100% / 6);
+연산자 앞에 띄어쓰기 하기
+
+인라인블록 공간 중복문제
+가로->float-left;
+세로문제->vertical-align:top;
+
+자식보다 부모에게 margin주는ㄱㅔ 나음
+
+hover->숨기다가 올리면 뜨게하는거
+z-index:100 vs z-index:1 ->100이 위에
+
+쌓임 맥락->
+<https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context>
+자식의 z인덱스가 아무리 높아도 부모의 z인덱스가 더 낮으면 그 위에 애들 못이긴다.
+
+사용자 입력->form / action
+form 안의 버튼 누르면 action으로 이동
