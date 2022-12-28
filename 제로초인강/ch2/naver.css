@@ -1,0 +1,56 @@
+#header-center{
+
+    margin: 0 auto; 
+    width:1080px;
+}
+
+/*부모-자식*/
+#header-search h1{
+    width: 198px;
+    height: 48px;
+    display:inline-block;
+    background-image: url('logo.png');
+    background-position:-40px 10px;
+    /* text-indent:100%;
+    overflow:hidden; */
+
+    /*한번에 background쓰는법*/
+    background:url(logo.png) -4px -4px no-repeat;
+
+}
+
+#header-search h1 span{
+    display:none;
+}
+
+/*자손선택자*/
+/* #header-center h1{
+
+} */
+
+#header-search h2{
+    display:none;
+}
+
+#header-search fieldset{
+    margin-left:20px;
+    padding:12px 0 12px 10px;
+
+
+    width:520px;
+    height:49px;
+    display:inline-block;
+    /*서로 나란히 배치할때 사용
+    안그러면 div는 하나에 한줄을 다 쓰니까
+    block-전체 하나 다쓰기
+    inline-내용물 사이즈만큼만
+    inline-block: width 지정 가능
+    */
+    border:2px solid #03cf5d
+
+}
+
+/*화면에선 사라지지만 남아있는거*/
+.blind{
+
+}
