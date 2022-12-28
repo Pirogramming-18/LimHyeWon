@@ -1,0 +1,206 @@
+/*모든 태그 의미*/
+*{
+    box-sizing: border-box;
+
+}
+
+body, html{
+    margin:0;
+    padding:0;
+}
+
+#fixed{
+    position:fixed;
+    top:50px;
+    right:50px;
+    display:inline-block;
+
+}
+
+.center-align{
+    margin:0 auto; 
+    width:1080px;
+}
+
+/*부모-자식*/
+#header-search h1{
+    width: 198px;
+    height: 48px;
+    display:inline-block;
+    background-image: url('logo.png');
+    background-position:-40px 10px;
+    /* text-indent:100%;
+    overflow:hidden; */
+
+    /*한번에 background쓰는법*/
+    background:url(logo.png) -4px -4px no-repeat;
+    vertical-align: middle;
+    
+
+
+}
+
+#header-search h1 span{
+    display:none;
+}
+
+/*자손선택자*/
+/* #header-center h1{
+
+} */
+
+#header-search h2{
+    display:none;
+}
+
+#header-search fieldset{
+    margin-left:20px;
+    padding:12px 0 12px 10px;
+
+
+    width:520px;
+    height:49px;
+    display:inline-block;
+    /*서로 나란히 배치할때 사용
+    안그러면 div는 하나에 한줄을 다 쓰니까
+    block-전체 하나 다쓰기
+    inline-내용물 사이즈만큼만
+    inline-block: width 지정 가능
+    */
+    border:2px solid #03cf5d;
+    vertical-align: middle;
+    position:relative; /*자신의 static 위치 기반으로 움직임*/
+    /*
+    https://developer.mozilla.org/ko/docs/Web/CSS/Containing_block
+    참고
+    */
+    
+
+}
+
+#header-search fieldset input{
+    border:none;
+    padding: 0;
+    outline:none;
+    vertical-align: top;
+
+}
+
+#header-search fieldset button{
+    width:49px;
+    height:49px;
+    border:none;
+    padding:0;
+    background:#03cf5d;
+    position:absolute; /*본인 컨테이너 블록 기준으로 움직임*/
+    right:0;
+    top:-2px;
+    
+}
+
+#search-image{
+    background-image: url('./logo.png');
+    background-position: -3px,-60px; 
+    background-repeat: no-repeat;
+    width:21px;
+    height:21px;
+    display:inline-block;
+    margin:14px;
+
+}
+
+
+/*화면에선 사라지지만 남아있는거*/
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav li{
+    display:inline-block;
+}
+/* nav li:first-child span:first-child{
+    height:16px;
+    display:inline-block;
+    -webkit-background-size: 442px 428px;
+     background-size: 442px 428px;
+    background-repeat: no-repeat; 
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+    margin-left:14px;
+} */
+
+/*css적용 우선순위"
+important , inline, id-금, class(속성)-은, tag-동*/
+/* nav li:first-child span:first-child{
+    width:25px;
+    background-position: 0 -285px;
+    margin-left:0px;
+    
+}
+
+nav li:nth-child(3) span:first-child{
+    width:40px;
+    background-position: 0 -285px;
+  
+} */
+/*현재는 이미지말고 텍스트람,,*/
+/* nav li:first-child span:first-child{
+    height:16px;
+    display:inline-block;
+    -webkit-background-size: 442px 428px;
+    
+    background-size: 442px 428px;
+    background-repeat: no-repeat; 
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+    margin-left:14px;
+} */
+
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
+}
+
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+    background-repeat: no-repeat;
+    margin-left: 14px;
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
