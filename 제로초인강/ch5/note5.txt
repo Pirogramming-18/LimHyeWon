@@ -1,0 +1,22 @@
+블록 서식 문백
+-inline block
+-float
+-overflow가 visible아니다
+-position이 absolute or fixed
+
+overflow:auto->자식이 넘치면 스크롤바
+overflow:hidden->넘치는거 자름
+
+clear:both
+
+float:right vs text:right
+float->둥둥 떠있으니까 있는지 모름 존재감이 위에떠있으니까
+밑에 빈공간으로 다음 애들이 들어옴
+text->본인 자리에 치고올라오지 않는다.
+
+
+main h3:nth of type(2){
+찐으로 h3사이에서만 자식 수 세기
+}
+
+margin collapsing:좌우에는 안생기는데 상하에서는 서로 겹친다 마진이
