@@ -7,6 +7,9 @@
     position:relative;
 }
 
+path{
+    stroke:white;
+}
 
 #logo{
     width:50px;
