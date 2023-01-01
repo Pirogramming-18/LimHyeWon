@@ -6,21 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/5f2d670c2c.js" crossorigin="anonymous"></script>
     <title>BootStrap</title>
 </head>
 <body class="bg-secondary">
     <header>
         <div class="header_container bg-dark">
             <nav class="menu text-muted m-2">
-                <div class="piro text-white">Pirogramming</div>
+                <a href="#" class="piro text-white">Pirogramming</a>
                 <div class="name text-primary">Lim-Hye-Won</div>
-                <a href="#s2" class="intro">Intro</a>
-                <a href="#s3" class="highlight">highlights</a>
-                <a href="" class="gallary">Gallary</a>
-                <a href="" class="contact">Contact</a>
+                <a href="#intro" class="intro">Intro</a>
+                <a href="#highlight" class="highlight">highlights</a>
+                <a href="#gallary" class="gallary">Gallary</a>
+                <a href="#contact" class="contact">Contact</a>
             </nav>
-            <div class="about m-2 text-success">about</div>
+        
+            <!-- Button trigger modal -->
+            <a type="button" class="btn btn-white border-1 border-info text-info" data-bs-toggle="modal" href="#about">about</a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="about">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">피로그래밍 18기!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>운영진 화이팅!!</h3>
+                                <p>피로그래밍 화이팅팅팅</p>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!--????다른곳에 넣으면 되는데 여기선 안먹힌,,다,,,-->
+          
+
         </div>
     </header>
     <main>
@@ -35,12 +60,12 @@
                 </div>
                 <div class="underline border-bottom border-dark p-1 w-75 mb-3 mt-4"></div>
                 <div class="getstarted">
-                    <a href="#s2" class="getstarted bg-primary text-white rounded-pill p-1">Get Started</a>
+                    <a type="button" class="btn btn-primary" href="#intro">Get Started</a>
                 </div>
             </div>
         </section>
-        <section id="s2">
-            <div class="s2_container w-100 vh-100">
+        <section id="intro">
+            <div class="intro_container w-100 vh-100">
                     <div class="title .text-info">
                         
                         <h1 class="text-info">Built On the Bootstrap Grid</h1>
@@ -50,28 +75,148 @@
                         </p>
                     </div>
                     <div>
-                        <a href="" class="learnmore bg-white text-black rounded-2">Learn More</a>
+                        
+                        <a type="button" href="#highlight" class="btn btn-light text-black m-1">Learn More</a>
                     </div>
                     
             </div>
         </section>
-        <section id="s3">
-            <div class="s3_container w-100 vh-100">
+        <section id="highlight">
+            <div class="highlight_container w-100">
                 <div class="title text-primary"><h1>Flexible Layouts</h1></div>
-                <div class="s3_grid">
-                    <img src="./images/airplane_01.jpg" class="imgs img1" alt="airplane">
-                    <img src="./images/street_03.JPG" class="imgs img2" alt="street">
-                    <img src="./images/tree_02.JPG" class="imgs img3" alt="tree">
+                <div class="traits d-flex justify-content-center">
+                    <div class="n">
+                        <i class="fa-solid fa-house fa-4x"></i>
+                        <div class="z">Responsive</div>
+                        <div class="z">Yore aite looks good everywhere</div>
+                    </div>
+                    <div class="n">
+                        <i class="fa-solid fa-star fa-4x"></i>
+                        <div class="">Cusomizable</div>
+                        <div class="">Easy to theme and customize with SASS</div>
+                    </div>
+                    <div class="n">
+                        <i class="fa-solid fa-check fa-4x"></i>
+                        <div class="">Consistent</div>
+                        <div class="">A mature, well-tested, stable codebase</div>
+                    </div>
+                </div>
+                <div>
                     
-
+                    <div class=""></div>
 
                 </div>
             </div>
+            
+
         </section>
+        <section id="gallary">
+            <div class="gallary_container w-100 mb-5">
 
+                <div class="row w-75 m-lg-auto flex-wrap:wrap">
+                    <div class="col-4">
+                        <img src="./images/airplane_01.jpg" class="imgs" alt="airplane">
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/street_03.JPG" class="imgs " alt="street">
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/tree_02.JPG" class="imgs " alt="tree">
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/happySmile.jpg" class="imgs " alt="tree">
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/pinkLake_02.jpg" class="imgs " alt="tree">
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/tree_01.JPG" class="imgs " alt="tree">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact_container w-100 vh-100">
+                <div class="title text-primary">
+                    <h2>Get in Touch</h2>
+                </div>
+                <div class="inputbox h-75 m-auto">
+                    <div class="row d-flex w-75 justify-content-between">
+                    
+                        <input type="text" class="col-3 text-secondary" value="name">
+                   
+                  
+                        <input type="text" class="col-3 text-secondary" value="email">
+                    
+                   
+                        <input type="text" class="col-3 text-secondary" value="phone">
+                    
+                    </div>
+                    <input type="text" class="w-75 h-50" value="your message here"></input>
+                    
+                
+                    <!-- Button trigger modal -->
+                    <a type="button" class="btn btn-primary w-25" data-bs-toggle="modal" href="#send">send</a>
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="send">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Nice-Job!</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>You clicked the button but it doesn't actually go anywhere</p>
+                                        <a href="">Learn more at Bootstrap</a>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">OK</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="footer_cotainer w-100 h-100 bg-dark">
+            <div class="row">
+                <div class="col">
+                    <div class="title text-info ">information</div>
+                    <div class="list text-white" style="text-align:center">
+                        <div>product</div>
+                        <div>services</div>
+                        <div>benefits</div>
+                        <div>developer</div>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div class="title text-info ">About</div>
+                    <div class="list text-white" style="text-align:center">
+                        <div>Contact us</div>
+                        <div>Delivery Information</div>
+                        <div>Privacy Policy</div>
+                        <div>Trauma & Condition</div>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div class="title text-info" style="text-align:start">Stay Posted</div>
+                    <div class="row">
+                        <input type="text" value="Tell me your email" class="w-75 mb-2">
+                        <a type="button" href="" class="btn btn-primary text-white w-50">Subscribe for updates</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
