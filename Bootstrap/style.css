@@ -3,23 +3,58 @@
 @media screen and (max-width: 480px) {
     .header_container{
         display: flex;
+        position:fixed;
        
     }
     .max_header_container{
         display: none;
     }
+
+    .inputbox_row{
+        flex-direction:column;
+        width:80%;
+    
+    }
+
+    .footer_row{
+        flex-direction: column;
+    }
+
+  
+
 }
 
 
 @media screen and (min-width: 480px) and (max-width:720px) {
     .header_container{
         display: flex;
+        position:fixed;
         
    
     }
     .max_header_container{
         display: none;
     }
+
+    .gallary_grid{
+        display:grid;
+        grid-gap:1rem;
+        place-items: center;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);   
+        grid-template-columns: repeat(2,1fr);   
+
+    }
+    .inputbox_row{
+        flex-direction:column;
+        width:80%;
+
+    }
+
+    .footer_row{
+        flex-direction: column;
+    }
+
     
   
 }
@@ -27,13 +62,34 @@
 @media screen and (min-width: 720px) and (max-width:1390px) {
     .header_container{
         display: flex;
-        
-   
+
+       position:fixed;
     }
+
     .max_header_container{
         display: none;
     }
+
+    .gallary_grid{
+        display:grid;
+        grid-gap:1rem;
+        place-items: center;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);    
+    }
+
+    .traits{
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-secondary{
+        width:20rem;
+    }
     
+    .footer_title, .list{
+        text-align: center;
+    }
   
 }
 
@@ -52,6 +108,26 @@
         width:40%;
         justify-content:space-around;
         align-items: center;
+    }
+
+    .gallary_grid{
+        display:grid;
+        grid-gap:1rem;
+        place-items: center;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);    
+    }
+    .traits{
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-secondary{
+        width:20rem;
+    }
+
+    .footer_title, .list{
+        text-align: center;
     }
 }
 
@@ -81,10 +157,6 @@
   
 }
 
-.title{
-  text-align: center;
-
-}
 
 .getstarted,.learnmore{
     text-decoration: none;
@@ -101,15 +173,7 @@
     gap:1rem;
 }
 
-.gallary_grid{
-    display:grid;
-    grid-gap:2rem;
-    place-items: center;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
-    
 
-}
 
 .imgs{
     width:100%;
@@ -128,4 +192,11 @@
 input{
     border-radius: 5px;
     border-color: transparent;    
+}
+.text-secondary{
+    margin-bottom: 1rem;
+}
+
+.title{
+    text-align: center;
 }
