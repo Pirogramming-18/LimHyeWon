@@ -24,37 +24,57 @@
             <!-- Button trigger modal -->
             <a type="button" class="btn btn-white border-1 border-info text-info" data-bs-toggle="modal" href="#about">about</a>
 
-            <!-- Modal -->
-            <div class="modal fade" id="about">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">피로그래밍 18기!</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h3>운영진 화이팅!!</h3>
-                                <p>피로그래밍 화이팅팅팅</p>
-                                
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-                            </div>
-                    </div>
+    
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="about">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">피로그래밍 18기!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>운영진 화이팅!!</h3>
+                            <p>피로그래밍 화이팅팅팅</p>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
                 </div>
             </div>
-            <!--????다른곳에 넣으면 되는데 여기선 안먹힌,,다,,,-->
         </div>
 
-        <div class="header_container w-100 bg-success justify-content-between">
-            <nav class="menu text-muted m-2">
-                <a href="#" class="piro text-white">Pirogramming</a>
-          
-            </nav>
-            <i class="fa-solid fa-bars m-3"></i>
+        <!---->
+        <div class="collapse header_container w-100" id="navbarToggleExternalContent header_container">
+            <div class="bg-dark p-4 w-100">
+            <a href="#" class="piro text-white text-decoration-none">Pirogramming</a>
+              <span class="text-muted">
+                <nav class="menu text-muted d-flex flex-column justify-content-around g-5">
+                    <div class="name text-primary">Lim-Hye-Won</div>
+                    <a href="#intro" class="intro">Intro</a>
+                    <a href="#highlight" class="highlight">highlights</a>
+                    <a href="#gallary" class="gallary">Gallary</a>
+                    <a href="#contact" class="contact">Contact</a>
+                </nav>
+            
+                <!-- Button trigger modal -->
+                <a type="button" class="btn btn-white border-1 border-info text-info" data-bs-toggle="modal" href="#about">about</a>
+              </span>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="piro text-white text-decoration-none">Pirogramming</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
 
 
-        </div>
+
     </header>
     <main>
         <section id="s1">
@@ -144,16 +164,16 @@
                 <div class="inputbox h-75 m-auto">
                     <div class="inputbox_row d-flex w-75 justify-content-between">
                     
-                        <input type="text" class=" text-secondary" value="name">
+                        <input type="text" class=" text-secondary" placeholder="name">
                    
                   
-                        <input type="text" class="text-secondary" value="email">
+                        <input type="text" class="text-secondary" placeholder="email">
                     
                    
-                        <input type="text" class="text-secondary" value="phone">
+                        <input type="text" class="text-secondary" placeholder="phone">
                     
                     </div>
-                    <input type="text" class="w-75 h-50" value="your message here"></input>
+                    <input type="text" class="w-75 h-50" placeholder="your message here"></input>
                     
                 
                     <!-- Button trigger modal -->
