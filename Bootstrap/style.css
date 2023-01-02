@@ -95,7 +95,7 @@
 
 /* screen의 width가 1024px 이상일 때 적용 */
 @media screen and (min-width: 1390px) {
-    .header_container{
+    #clikclick{
         display: none;
     }
 	.max_header_container{
@@ -148,6 +148,7 @@
     border-width:2px;
 
 }
+
 
 .s1_container, .intro_container{
     display: flex;
