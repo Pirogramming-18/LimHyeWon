@@ -29,13 +29,21 @@
         <div class="title bg-secondary w-50 m-auto d-flex justify-content-between">
             <table>
                 <thead>
+                    <th><input type="checkbox" id="checkAll"></th>
                     <th>구간기록</th>
-                    <th><i class="fa-solid fa-trash"></i></th>
+                    <th><i class="fa-solid fa-trash" id="delete"></i></th>
                 </thead>
 
                 <tbody id="listbody">
                     <tr>
-                        
+                        <td><input type="checkbox" class="checkcheck"></td>
+                        <td>
+                            <div class="r1">
+                                <span id="r_minutes">00</span>:
+                                <span id="r_seconds">00</span>:
+                                <span id="r_ten_milis">00</span>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>

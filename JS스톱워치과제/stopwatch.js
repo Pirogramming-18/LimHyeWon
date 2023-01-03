@@ -10,6 +10,10 @@ const buttonStart=document.getElementById('bt_start');
 const buttonStop=document.getElementById('bt_stop')
 const buttonReset=document.getElementById('bt_reset');
 
+const button_delete=document.querySelector('#delete');
+const button_checkAll=document.querySelector('#checkAll');
+
+
 buttonStart.onclick=function(){
     clearInterval(intervalId);
     intervalId=setInterval(operateTimer,10)
@@ -30,6 +34,14 @@ buttonReset.onclick=()=>{
     appendSeconds.innerText="00";
     appendTenMilis.innerText="00";
 
+}
+
+button_delete.onclick=()=>{
+    deleteSelected();
+}
+
+button_checkAll.onclick=()=>{
+    checkAll();
 }
 
 
@@ -71,5 +83,32 @@ function addTime(){
 
     document.querySelector('#listbody').appendChild(tr);
     //document.getElementById("listbody").appendChild(tr);
+
+}
+
+function checkAll(){
+   // var list=document.getElementById('listbody');
+
+    //var listChild=list.children;
+    //for(var i=0;i<listChild.length;i++){
+       // list.removeChild(listChild[i]);
+    //}
+
     
+        var checkboxs=document.querySelectorAll('#listbody .checkcheck');
+        for (var i in checkboxs){
+            checkboxs[i].checked=true; 
+        }
+    
+    
+}
+
+function deleteSelected(){
+    var list=document.getElementById('listbody');
+    var checkbox=document.querySelectorAll('#listbody .checkcheck');
+
+    for (var i in checkbox){
+        if(checkbox[i].checked) list.removeChild(checkbox[i].parentNode.parentNode);
+    }
+
 }
