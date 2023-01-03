@@ -1,41 +1,75 @@
-let timerId;
-let time = 0;
-const stopwatch = document.getElementById("stopwatch");
-let hour,min, sec,milisec;
+let minutes=0;
+let seconds=0;
+let ten_milis=0;
+let intervalId;
 
+const appendMinutes=document.getElementById('minutes');
+const appendSeconds=document.getElementById('seconds');
+const appendTenMilis=document.getElementById('ten_milis');
+const buttonStart=document.getElementById('bt_start');
+const buttonStop=document.getElementById('bt_stop')
+const buttonReset=document.getElementById('bt_reset');
 
-function printTime() {
-    time++;
-    stopwatch.innerText = getTimeFormatString();
+buttonStart.onclick=function(){
+    clearInterval(intervalId);
+    intervalId=setInterval(operateTimer,10)
 }
 
-//시계 시작 - 재귀호출로 반복실행
-function startClock() {
-    printTime();
-    stopClock();
-    timerId = setTimeout(startClock, 1000);
+buttonStop.onclick=()=>{
+    clearInterval(intervalId);//저 id를 가진 inerval이 동작 멈추기
+    addTime();
 }
 
-//시계 중지
-function stopClock() {
-    if (timerId != null) {
-        clearTimeout(timerId);
+buttonReset.onclick=()=>{
+    clearInterval(intervalId);
+    ten_milis=0;
+    seconds=0;
+    minutes=0;
+
+    appendMinutes.innerText="00";
+    appendSeconds.innerText="00";
+    appendTenMilis.innerText="00";
+
+}
+
+
+
+function operateTimer(){
+    ten_milis++;
+    appendTenMilis.textContent=String(ten_milis).padStart(2,0);
+
+    if(ten_milis>99){
+        seconds++;
+        appendSeconds.textContent=String(seconds).padStart(2,0);
+        ten_milis=0;
+        appendTenMilis="00";
+    }
+
+    if(seconds>59){
+        minutes++;
+        appendMinutes.textContent=String(minutes).padStart(2,0);
+        seconds=0;
+        appendSeconds.textContent="00";
     }
 }
 
-// 시계 초기화
-function resetClock() {
-    stopClock()
-    stopwatch.innerText = "00:00:00";
-    time = 0;
-}
+function addTime(){
+    var tr=document.createElement("tr");
+    var input=document.createElement("input");
 
-// 시간(int)을 시, 분, 초 문자열로 변환
-function getTimeFormatString() {
-    hour = parseInt(String(time / (60 * 60)));
-    min = parseInt(String((time - (hour * 60 * 60)) / 60));
-    sec = time % 60;
-    milisec=time;
+    input.setAttribute("type","checkbox");
+    input.setAttribute("class","checkcheck");
 
-    return String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0')+":"+String(milisec).padStart(2,'0');
+    var td01=document.createElement("td");
+    td01.appendChild(input);
+
+    var td02=document.createElement("td");
+    td02.innerHTML=String(minutes).padStart(2,0)+":"+String(seconds).padStart(2,0)+":"+String(ten_milis).padStart(2,0);
+
+    tr.appendChild(td01);
+    tr.appendChild(td02);
+
+    document.querySelector('#listbody').appendChild(tr);
+    //document.getElementById("listbody").appendChild(tr);
+    
 }

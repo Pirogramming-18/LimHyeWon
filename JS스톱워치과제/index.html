@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5f2d670c2c.js" crossorigin="anonymous"></script>
+
+    <title>stopwatch</title>
+</head>
+<body>
+    <div class="container w-50 m-auto d-flex flex-column bg-secondary text-center pb-3">
+        <h2>피로 스톱워치</h2>
+        <h1 class="bg-white border-5">
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>:
+            <span id="ten_milis">00</span>
+        </h1>
+        <div class="buttons">
+            <button id="bt_start" class="rounded-2 border-light">START</button>
+            <button id="bt_stop" class="rounded-2 border-light">STOP</button>
+            <button id="bt_reset" class="rounded-2 border-light">RESET</button>
+        </div>
+        
+    </div>
+
+    <div class="list_container mt-5">
+        <div class="title bg-secondary w-50 m-auto d-flex justify-content-between">
+            <table>
+                <thead>
+                    <th>구간기록</th>
+                    <th><i class="fa-solid fa-trash"></i></th>
+                </thead>
+
+                <tbody id="listbody">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+    <script src="./stopwatch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+</body>
+</html>
