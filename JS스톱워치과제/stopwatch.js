@@ -96,9 +96,18 @@ function checkAll(){
 
     
         var checkboxs=document.querySelectorAll('#listbody .checkcheck');
-        for (var i in checkboxs){
-            checkboxs[i].checked=true; 
+        if(button_checkAll.checked){
+            for (var i in checkboxs){
+                checkboxs[i].checked=true; 
+            }
         }
+        else{
+            for (var i in checkboxs){
+                checkboxs[i].checked=false; 
+            }
+
+        }
+
     
     
 }
