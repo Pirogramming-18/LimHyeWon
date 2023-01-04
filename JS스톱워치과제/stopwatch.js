@@ -107,9 +107,7 @@ function checkAll(){
             }
 
         }
-
-    
-    
+   
 }
 
 function deleteSelected(){
