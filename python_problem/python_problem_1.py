@@ -16,6 +16,14 @@ while 1:
                 num+=1
                 print('player{}:{}'.format(character[index], num))
 
+                if num==31:
+                    #31을 말하는 사람이 지는 거니까 index를 바꿔서 31을 말하지 않은 사람의
+                    #인덱스를 우승자로 지정하기 위함
+                    if index==0:index=1
+                    else: index=0
+                    print('player{} is win!'.format(character[index]))
+                    sys.exit()
+
             if index==0: index=1#플레이어 전환을 위한 값 변경경
             else: index=0
 
