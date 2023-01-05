@@ -1,5 +1,6 @@
 num=0
-character=1 #1일땐 A, -1 일땐 B 플레이어
+character=['A','B']
+index=0 #character 배열의 인덱스
 
 while 1:
     try:
@@ -12,9 +13,9 @@ while 1:
         else:
             for i in range(select):
                 num+=1
-                if character==1:#A player
-                    print('player{}:{}'.format('A', num))
-                else:
-                    print('player{}:{}'.format('B', num))
-            character*=(-1) #플레이어 전환을 위한 값 변경경
+                if num==31:
+                    print('player{} is win!'.format(character[index]))
+                print('player{}:{}'.format(character[index], num))
+            if index==0: index=1#플레이어 전환을 위한 값 변경경
+            else: index=0
 
