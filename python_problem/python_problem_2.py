@@ -10,7 +10,7 @@ def Menu1(name,mid_score,final_score) :
     student['grade']='0' #grade는 우선 '0'으로 초기화
 
     student_list.append(student)
-    #student dictionary에 학생 정보 저장하는 코딩
+    #student (dictionary)에 학생 정보 저장후 student_list (list)에 학생들의 정보 추가
 
 ##############  menu 2
 def Menu2(student_list) :
