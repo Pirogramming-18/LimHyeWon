@@ -8,16 +8,18 @@ def Menu1(name,mid_score,final_score) :
     student['name']=name
     student['mid_score']=mid_score
     student['final_score']=final_score
-    student['grade']=0
-    student_list.append(student)
+    student['grade']='0' #grade는 우선 '0'으로 초기화
 
-    #사전에 학생 정보 저장하는 코딩
+    student_list.append(student)
+    #student dictionary에 학생 정보 저장하는 코딩
 
 ##############  menu 2
 def Menu2(student_list) :
     for student in student_list:
-        if student['grade']==0:
-            average=(mid_score+final_score)//2
+        if student['grade']=='0':
+
+            average=(student['mid_score']+student['final_score'])/2
+
             if average>=90:
                 student['grade']='A'
             elif average>= 80:
@@ -34,10 +36,11 @@ def Menu2(student_list) :
 ##############  menu 3
 def Menu3(student_list) :
     print('----------------------------')
-    print('name   mid   final   grade')
+    print('{:<6} {:<4} {:<4} {:<4}'.format('name','mid','final','grade'))
     print('----------------------------')
     for student in student_list:
-        print('{}      {}      {}      {}'.format(student['name'],student['mid_score'],student['final_score'],student['grade']))
+        # print('{}      {}      {}      {}'.format(student['name'],student['mid_score'],student['final_score'],student['grade']))
+        print("{:<6} {:<4} {:<4} {:<4}".format(student['name'],student['mid_score'],student['final_score'],student['grade']))
 
 ##############  menu 4
 def Menu4(del_student):
@@ -59,22 +62,27 @@ while True :
         try:
             name,mid_score,final_score=input('Enter name mid-score final-score: ').split(' ')
 
-            if (name is None) or (mid_score is None) or (final_score is None):
-                raise Exception('Num of data is not 3!')
-
-            # if not (int(mid_score) or int(final_score)):
-            #     raise Exception()
+            # if (name is None) or (mid_score is None) or (final_score is None):
+            #     raise Exception('Num of data is not 3!')
 
             for student in student_list:
                 if student['name']==name:
                     raise Exception('Already exist name!')
-            mid_score = int(mid_score)
-            final_score = int(final_score)
+
+            if not (mid_score.isdigit() and final_score.isdigit()):
+                raise Exception('Score is not positive integer!')
+
+
+
+        except ValueError:
+            print('Num of data is not 3!')
+
         except Exception as e:
             print(e)
-            print('Score is not positive integer!')
-        else:
 
+        else:
+            mid_score = int(mid_score)
+            final_score = int(final_score)
             Menu1(name,mid_score,final_score)
         #예외사항 처리(데이터 입력 갯수, 이미 존재하는 이름, 입력 점수 값이 양의 정수인지)
         #예외사항이 아닌 입력인 경우 1번 함수 호출
@@ -92,7 +100,7 @@ while True :
         try:
             if not student_list: raise Exception('No student data')
             for student in student_list:
-                if student['grade'] is None:
+                if student['grade']=='0':
                     raise Exception("There is a student who didn't get grade")
         except Exception as e:
             print(e)
@@ -112,7 +120,7 @@ while True :
                     del_student=student
                     Menu4(del_student)
                     print('{} student information is deleted'.format(del_student_name))
-            if del_student is None:
+            if not del_student:
                 print("Not exist name!")
 
         except Exception as e: print(e)
