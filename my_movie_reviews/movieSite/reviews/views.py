@@ -46,3 +46,9 @@ def reviews_edit(request,pk,*args, **kwargs):
         return redirect("/reviews/{}".format(review.id))
     return render(request,"reviews/reviews_edit.html",{"review":review})
 
+def reviews_delete(request,pk,*args, **kwargs):
+    review=Review.objects.get(id=pk)
+    if request.method=="POST":
+        review.delete()
+    return redirect("/")
+        

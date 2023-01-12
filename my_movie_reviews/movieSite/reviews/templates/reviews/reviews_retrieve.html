@@ -1,6 +1,10 @@
 <div>
     <h1>{{review.title}}</h1>
     <a href="/reviews/{{review.id}}/edit">edit</a>
+    <form action="/reviews/{{review.id}}/delete" method="post">
+        {% csrf_token%}
+        <input type="submit" value="delete">
+    </form>
     <a href="/">my Movie Reviews</a>
 </div>
 <div>
