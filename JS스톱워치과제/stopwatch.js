@@ -6,6 +6,7 @@ let intervalId;
 const appendMinutes=document.getElementById('minutes');
 const appendSeconds=document.getElementById('seconds');
 const appendTenMilis=document.getElementById('ten_milis');
+
 const buttonStart=document.getElementById('bt_start');
 const buttonStop=document.getElementById('bt_stop')
 const buttonReset=document.getElementById('bt_reset');
@@ -17,6 +18,11 @@ const button_checkAll=document.querySelector('#checkAll');
 buttonStart.onclick=function(){
     clearInterval(intervalId);
     intervalId=setInterval(operateTimer,10)
+}
+
+buttonStart.onclick=()=>{
+    clearInterval(intervalId);
+    intervalId=setInterval(operate)
 }
 
 buttonStop.onclick=()=>{
