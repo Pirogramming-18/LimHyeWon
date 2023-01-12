@@ -1,0 +1,32 @@
+<h1>edit reviews</h1>
+
+<form action="/reviews/{{review.id}}/edit" method="post">
+    {% csrf_token %}
+    <small>title:</small> 
+    <input name="title" placeholder="title of movie" value="{{review.title}}"/>
+    <br/>
+    <small>개봉일:</small> 
+    <input name="release_year" placeholder="release_year" value="{{review.release_year}}"/>
+    <br/>
+    <small>장르:</small> 
+    <input name="genre" placeholder="genre" value="{{review.genre}}"/>
+    <br/>
+    <small>별점:</small> 
+    <input name="star_rating" placeholder="별점" value="{{review.star_rating}}"/>
+    <br/>
+    <small>러닝타임:</small> 
+    <input name="running_time" placeholder="러닝타임" value="{{review.running_time}}"/>
+    <br/>
+    <small>내용:</small> 
+    <textarea name="content" placeholder="content"/>{{review.content}}</textarea>
+    <br/>
+    <small>감독:</small> 
+    <input name="director" placeholder="감독" value="{{review.director}}"/>
+    <br/>
+    <small>배우:</small> 
+    <input name="actors" placeholder="배우들" value="{{review.actors}}"/>
+    <br/>
+    
+    <input type="submit" value="save"/>
+
+</form>

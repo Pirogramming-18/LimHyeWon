@@ -1,0 +1,23 @@
+<div>
+    <h1>{{review.title}}</h1>
+    <a href="/reviews/{{review.id}}/edit">edit</a>
+    <a href="/">my Movie Reviews</a>
+</div>
+<div>
+    <small>개봉년도:{{review.release_year}}년</small>
+    <br/>
+    <small>감독:{{review.director}}</small>
+    <br/>
+    <small>주연:{{review.actors}}</small>
+    <br/>
+    <small>장르:{{review.genre}}</small>
+    <br/>
+    <small>러닝타임:{{review.running_time}}</small>
+    <br/>
+    <small>별점:{{review.star_rating}}</small>
+    <br/>
+</div>
+
+<div>
+    <p>리뷰내용:{{review.content}}</p>
+</div>

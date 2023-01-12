@@ -1,0 +1,24 @@
+<h1>Upload new reviews</h1>
+
+<form action="/reviews/create" method="post">
+    {% csrf_token %} 
+    <input name="title" placeholder="title of movie"/>
+    <br/>
+    <input name="release_year" placeholder="release_year"/>
+    <br/>
+    <input name="genre" placeholder="genre"/>
+    <br/>
+    <input name="star_rating" placeholder="별점"/>
+    <br/>
+    <input name="running_time" placeholder="러닝타임"/>
+    <br/>
+    <textarea name="content" placeholder="content"/></textarea>
+    <br/>
+    <input name="director" placeholder="감독"/>
+    <br/>
+    <input name="actors" placeholder="배우들"/>
+    <br/>
+    
+    <input type="submit" value="save"/>
+
+</form>
