@@ -1,12 +1,22 @@
-<h3>최근에 좋았던 영화목록</h3>
+{% load static%}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="{%static 'css/reviews.css' %}">
+<div class="header d-flex">
+    <a href="/" class="site_title m-auto">My Movie Reviews🐬</a>
+    <a href="/reviews/create" class="add">Add new reviews</a>
+</div>
 
-<a href="/reviews/create">Add new reviews</a>
 
 {% for review in reviews %}
+<div class="movie_list d-flex">
+    <div class="movie w-50">
+        <p class="movie_title"><a href="/reviews/{{review.pk}}">👻{{review.title}}</a></p>
+        <small>개봉년도: {{review.release_year}}년</small>
+        <small>장르: {{review.genre}}</small>
+        <small>별점: {{review.star_rating}}</small>
+    </div>
+</div>
 
-<p><a href="/reviews/{{review.pk}}">{{review.title}}</a></p>
-<small>개봉년도: {{review.release_year}}년</small>
-<small>장르: {{review.genre}}</small>
-<small>별점: {{review.star_rating}}</small>
+
 
 {%endfor%}

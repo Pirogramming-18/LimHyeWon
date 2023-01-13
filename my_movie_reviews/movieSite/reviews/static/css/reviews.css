@@ -1,0 +1,57 @@
+.header{
+    justify-content: space-between;
+}
+
+.site_title{
+    font-size:2rem;
+}
+
+.movie_title >a {
+    font-size: large;
+    background-color: rgb(183, 252, 229);
+    color:gray;
+   
+}
+.add, .site_title{
+    text-decoration: none;
+    color:gray;
+    padding: 2rem;
+}
+.movie_list{
+    padding: 1rem;
+    justify-content: center;
+}
+
+.body_header{
+    justify-content: end;
+    margin-right: 1rem;
+}
+.options{
+    width: 20%;
+}
+.edit{
+    margin-right: 1rem;
+}
+
+.edit_container,.main_container,.create_container{
+    width:80%;
+    margin:0 auto;
+    background-color: rgba(240, 255, 255, 0.747);
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+input{
+    width:30%;
+    margin-left: 1rem;
+}
+textarea {
+    width:90%;
+    margin-left:1rem;
+}
+
+.save{
+    justify-content: end;
+    margin:1rem;
+}
