@@ -1,0 +1,41 @@
+<html lang="ko">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idea edit</title>
+    <p>아이디어 수정 페이지입니다. 당신의 아이디어를 잊지말고 수정하세요!</p>
+    
+</head>
+
+<body>
+    <form action="{% url 'posts:ideas_update' post.pk %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div>아이디어명:</div>
+        <input name="title" placeholder="title" value="{{post.title}}">
+        <br/>
+        <div>image:</div>
+        <input type="file" name="image">
+        <br/>
+        <div>아이디어명 설명:</div>
+        <textarea name="content" value="{{post.content}}">{{post.content}}</textarea>
+        </br/>
+        <div>아이디어명 관심도:</div>
+        <input name="interest" placeholder="0" value="{{post.interest}}">
+        <br/>
+        <div>예상 개발툴:</div>
+        <select name="tool">
+            {% for option in tools %}
+            <option value="{{option}}">{{option}}</option>
+            {% endfor %}
+        </select>
+
+        <div>
+            <input type="submit", value="save"/>
+        </div>
+    </form>
+</body>
+</html>

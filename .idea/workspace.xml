@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f51855e0-6804-44af-a301-1f1ee67f2cc5" name="Changes" comment="9단계">
-      <change afterPath="$PROJECT_DIR$/python_problem/t.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_problem/python_problem_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_problem/python_problem_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/templates/reviews/reviews_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/templates/reviews/reviews_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/templates/reviews/reviews_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_movie_reviews/movieSite/reviews/templates/reviews/reviews_edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
